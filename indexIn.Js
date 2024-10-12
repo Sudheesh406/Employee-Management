@@ -25,6 +25,25 @@ let username = document.getElementById("username");
 let password = document.getElementById("password");
 let search = document.getElementById("search");
 
+const salutationError = document.getElementById("salutationErr");
+const firstnameError = document.getElementById("firstnameErr");
+const lastnameError = document.getElementById("lastnameErr");
+const emailError = document.getElementById("emailErr");
+const mobileError = document.getElementById("mobileNumErr");
+const dobError = document.getElementById("dobErr");
+const qualificationError = document.getElementById("qualificationErr");
+const addressError = document.getElementById("addressErr");
+const countryError = document.getElementById("countryErr");
+const stateError = document.getElementById("stateErr");
+const cityError = document.getElementById("cityErr");
+const zipError = document.getElementById("zipErr");
+const usernameError = document.getElementById("userNameErr");
+const passwordError = document.getElementById("passwordErr");
+
+const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+const mobileRegex = /^\d{10}$/;
+const passwordRegex = /^(?=.*[A-Z])(?=.*\d).{8,}$/;
+
 // ****************************ADD-OR-EDIT-EMPLOYEE************************************
 
 section.addEventListener("click", function (event) {
@@ -341,25 +360,8 @@ async function upload(Data) {
 
 submit.onclick = function (event) {
   event.preventDefault();
-  const salutationError = document.getElementById("salutationErr");
-  const firstnameError = document.getElementById("firstnameErr");
-  const lastnameError = document.getElementById("lastnameErr");
-  const emailError = document.getElementById("emailErr");
-  const mobileError = document.getElementById("mobileNumErr");
-  const dobError = document.getElementById("dobErr");
-  const qualificationError = document.getElementById("qualificationErr");
-  const addressError = document.getElementById("addressErr");
-  const countryError = document.getElementById("countryErr");
-  const stateError = document.getElementById("stateErr");
-  const cityError = document.getElementById("cityErr");
-  const zipError = document.getElementById("zipErr");
-  const usernameError = document.getElementById("userNameErr");
-  const passwordError = document.getElementById("passwordErr");
-  let isValid = true;
 
-  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-  const mobileRegex = /^\d{10}$/;
-  const passwordRegex = /^(?=.*[A-Z])(?=.*\d).{8,}$/;
+  let isValid = true;
 
   if (salutation.value.trim() === "select salutation") {
     salutationError.textContent = "Salutation is required!";
@@ -699,25 +701,64 @@ async function editEmployee(Data) {
 
 saveChange.onclick = function (event) {
   event.preventDefault();
-  const salutationError = document.getElementById("salutationErr");
-  const firstnameError = document.getElementById("firstnameErr");
-  const lastnameError = document.getElementById("lastnameErr");
-  const emailError = document.getElementById("emailErr");
-  const mobileError = document.getElementById("mobileNumErr");
-  const dobError = document.getElementById("dobErr");
-  const qualificationError = document.getElementById("qualificationErr");
-  const addressError = document.getElementById("addressErr");
-  const countryError = document.getElementById("countryErr");
-  const stateError = document.getElementById("stateErr");
-  const cityError = document.getElementById("cityErr");
-  const zipError = document.getElementById("zipErr");
-  const usernameError = document.getElementById("userNameErr");
-  const passwordError = document.getElementById("passwordErr");
-  let isValid = true;
+ let user
+  allData.forEach((emp) => {
+    if (emp.id === emp_id) {
+      user = emp;
+    }
+  });
 
-  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-  const mobileRegex = /^\d{10}$/;
-  const passwordRegex = /^(?=.*[A-Z])(?=.*\d).{8,}$/;
+  let checkData = updatedData()
+
+  let valid = true;
+  if (checkData.salutation != user.salutation){
+    valid = false;
+  }
+  if (checkData.firstName != user.firstName){
+    valid = false;
+  }
+  if (checkData.lastName != user.lastName){
+    valid = false;
+  }
+  if (checkData.email != user.email){
+    valid = false;
+  }
+  if (checkData.phone != user.phone){
+    valid = false;
+  }
+  if (checkData.dob != user.dob){
+    valid = false;
+  }
+  if (checkData.gender != user.gender){
+    valid = false;
+  }
+  if (checkData.qualifications != user.qualifications){
+    valid = false;
+  } 
+  if (checkData.address != user.address){
+    valid = false;
+  }
+  if (checkData.country !=  user.country){
+    valid = false;
+  }
+  if (checkData.state != user.state){
+    valid = false;
+  }
+  if (checkData.city != user.city){
+    valid = false;
+  }
+  if (checkData.zip != user.zip){
+    valid = false;
+  }
+  if (checkData.username != user.username){
+    valid = false;
+  }
+  if (checkData.password != user.password){
+    valid = false;
+  }
+  if(valid === false){
+    
+    let isValid = true;
 
   if (salutation.value.trim() === "select salutation") {
     salutationError.textContent = "Salutation is required!";
@@ -814,13 +855,18 @@ saveChange.onclick = function (event) {
     passwordError.textContent = "";
   }
   if (isValid) {
-    let Data = updatedData();
-    editEmployee(Data);
+    editEmployee(checkData);
     BasicDtl.style.opacity = "0px";
     BasicDtl.style.display = "none";
     document.getElementById("overlay").style.display = "none";
   }
-};
+}
+if(valid === true){
+  BasicDtl.style.opacity = "0px";
+  BasicDtl.style.display = "none";
+  document.getElementById("overlay").style.display = "none";
+}
+}
 
 document.getElementById("firstName").addEventListener("input", function () {
   document.getElementById("firstnameErr").textContent = "";
