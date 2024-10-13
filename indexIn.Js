@@ -1,3 +1,4 @@
+
 let container = document.getElementById("container");
 let BasicDtl = document.getElementById("BasicDtl");
 let section = document.getElementById("section");
@@ -67,6 +68,7 @@ AddEmp.onclick = function () {
 
 let allData;
 let limit = 2;
+let image;
 async function employeeData() {
   try {
     let api = await fetch("http://localhost:3000/employees");
@@ -513,7 +515,7 @@ document.getElementById("salutation").addEventListener("input", function () {
 
 // ***********************************IMAGE_UPLOADING***************************************
 
-let image;
+
 document.getElementById("proImage").addEventListener("input", function (event) {
   event.stopPropagation();
   image = event.target.files[0];
@@ -938,6 +940,7 @@ function searchEmployee(event) {
 }
 
 // ************************************PAGINATION_BUTTON********************************************
+
 function renderBtn(limit, data) {
   let btnUl = document.getElementById("pgBtns");
   let btnNum = Math.ceil(data.length / limit);

@@ -1,3 +1,4 @@
+
 let salutation = document.getElementById("salutation");
 let firstname = document.getElementById("firstName");
 let lastname = document.getElementById("lastName");
@@ -395,5 +396,4 @@ saveChange.onclick=function(event){
   document.getElementById("salutation").addEventListener("input", function () {
     document.getElementById("salutationErr").textContent = ""; 
   });
-
 
