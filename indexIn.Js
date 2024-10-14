@@ -515,7 +515,6 @@ document.getElementById("salutation").addEventListener("input", function () {
 
 // ***********************************IMAGE_UPLOADING***************************************
 
-
 document.getElementById("proImage").addEventListener("input", function (event) {
   event.stopPropagation();
   image = event.target.files[0];
