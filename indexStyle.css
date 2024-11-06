@@ -1,0 +1,327 @@
+body {
+    margin: 0px;
+    padding: 0px;
+  }
+  * {
+    font-family: 'DM Sans';
+  }
+h1,h2,h3,h4,h5,h6{
+    padding: 0px;
+    margin: 0px;
+    line-height: 0px;
+}
+
+.p-pad-mar{
+    padding: 0px; 
+    margin: 0px;
+}
+
+li{
+    list-style: none;
+}
+
+.empl-mana{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #FFFFFFB2;
+}
+
+.primary-bg-clr{
+    background: linear-gradient(149.96deg, #301F81 12.51%, #0F0441 89.53%);
+}
+
+.secondary-bg{
+    background: #F4F7FE;
+}
+
+.primary-clr{
+     color: #fff;;
+}
+
+.main-section{
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+}
+
+.main-container{
+    margin: 0px;
+    padding: 0px;
+    max-width: 1520px;
+}
+
+.teritory-clr{
+    color: #8B95B7;
+}
+
+.empl-lis{
+    max-width: 400px;
+    gap: 10px;
+}
+
+.empl-lis-cnt{
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333333;
+}
+
+.search{
+    max-width: 300px;
+}
+
+.btn-div{
+    max-width: 200px;
+}
+
+.cnr-para{
+    color: #707EAE;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.mn-hd{
+    color: #2B3674;
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.sec-mn-hd{
+    font-size: 24px;
+    font-weight: 700;
+    color: #2B3674;
+    margin: 0px;
+}
+
+.bell-icn-clr{
+    color: #8F9BBA;
+}
+
+.pg-num{
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid #F1F1F1;
+    background-color: #fff;
+}
+
+.main-div{
+    position: relative;
+}
+
+.sub-div{
+    position: absolute;
+    width: 100%;
+}
+
+.pd-tp{
+    padding-top: 5px;
+}
+
+.poppins-sm{
+    font-size: 23px;
+    font-weight: 300;
+}
+
+.poppins-lg{
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.position{
+    position: relative;
+}
+
+.absolutee{
+    position: absolute;
+}
+
+.sponser{
+    position:absolute;
+    top: 380px;
+    left: 25px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.menu{
+    position: relative;
+    height: 100vh;
+}
+
+.tail-contents{
+    position: relative;
+}
+
+.tail{
+    position: absolute;
+    top: 520px;
+    right: 40px;
+}
+
+.tail-text{
+    min-width: 1230px;
+}
+
+.btnBtn{
+    border: transparent;
+    background-color: #fff;
+    color: #8B95B7;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* ***************************************************************** */
+
+.t-s-clr{
+    background: #E9EDF2;
+}
+
+value{
+    color: #cb5d9f !important;
+    
+}
+.h-img-inp{
+    min-height:130px
+}
+.img-ft-sz {
+    font-size: 16px;
+}
+.main-ft-sz{
+    font-size: 24px;
+}
+
+.sm-ft-sz{
+    font-size: 12px;
+}
+
+.normal-ft-sz {
+    font-size: 14px;
+
+}
+
+.main-gap{
+    gap:5 px;
+}
+
+.row-f{
+    gap:15px ;
+}
+
+.border-rd{
+    border-radius: 12px                
+}
+
+.main-clr{
+    color: #4318FF !important;
+}
+
+.bg-main-clr{
+    background-color: #4318FF;
+}
+
+.main-border{
+    border-radius: 15px;
+    overflow: scroll;
+}
+
+.form-label::after{
+    content: "*";
+    color: red;
+}
+
+.height-clr{
+    height: 45px;
+}
+
+.sm-size-inp{
+    width: 80px;
+}
+
+.dash-border{
+    border-style:dashed;
+    color: #B2BAD0;
+    border-radius: 15px;
+}
+
+.form2{
+    max-width: 650px;
+    position: absolute;
+    top: 10px;
+    left: 500px;
+    opacity: 0px;
+    height: 90%;
+    display: none;
+    z-index: 99;
+}
+
+.info-clr{
+    background: #FAF9FF!important;
+    border: transparent!important;
+}
+
+.main-border::-webkit-scrollbar {
+    display: none;
+}
+
+.deleteform{
+    position: absolute;
+    top: 250px;
+    right: 500px;
+    background-color: #fff;
+    opacity: 0px;
+    display: none;
+}
+
+#overlay{
+    position: absolute;
+    top: 0px;
+    left: 0 !important;
+    display: none;
+    background-color: rgba(0,0,0,.8);
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+
+}
+
+.pro-img{
+    width: 30px;
+    height: 30px;
+}
+
+.btn-dp-posi{
+    position: absolute;
+}
+
+.Dp-Position{
+    position: relative;
+}
+
+.btn-dp{
+    width: 50px;
+    padding-left: 28px;
+    padding-bottom: 7px;
+    padding-top: 7px;
+    padding-right: 40px;
+}
+.cornerBtn{
+   display: flex; 
+   justify-content: end;
+   gap: 5px;
+   padding-top: 20px; 
+   padding-bottom:20px;
+}
+.activeBtn {
+    background-color: #9048c7; 
+    color: rgb(0, 208, 255) !important; 
+    border-color: #3d1111; 
+  }
+a{
+    text-decoration: none !important;
+
+}
+.red{
+    color: red;
+}
